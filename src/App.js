@@ -9,10 +9,10 @@ function App() {
   return (
     <div className="App">
       <h1>App.js</h1>
-      <TradeDis />
       {/* <Route exact path='/' component={Home} /> */}
       <Route path='/signin' component={SignIn} />
       <Route path='/signup' component={SignUp} />
+      <Route path='/trade-card' component={TradeDis} />
     </div>
   );
 }
