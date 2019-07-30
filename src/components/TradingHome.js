@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
-import TradeDis from "./components/TradeDis";
+// import "./App.css";
+import TradeDis from "./TradeDis";
 import "semantic-ui-css/semantic.min.css";
-import TradeCardOutput from "./components/TradeCardOutput";
-import OutputTrade from "./components/OutputTrade";
-import TradeNav from "./components/TradeNav";
-import TradeNav from "./components/TradeNav";
+import TradeCardOutput from "./TradeCardOutput";
+import OutputTrade from "./OutputTrade";
+import TradeNav from "./TradeNav";
+import axios from "axios";
 
 function TradingHome() {
   const [trade, setTrade] = useState([]);
@@ -29,11 +29,6 @@ function TradingHome() {
 
   return (
     <div className="App">
-      <section className="crypto-list grid-view">
-        {crypto.map(cryp => {
-          return <TradeCardOutput key={cryp.id} cryp={cryp} />;
-        })}
-      </section>
       <TradeNav />
       <h1>We are Trading Now</h1>
       <TradeDis teamAdd={tradeChange} />
@@ -44,7 +39,11 @@ function TradingHome() {
         ))}
       </div>
 
-      <TradeCardOutput />
+      <section className="crypto-list grid-view">
+        {crypto.map(cryp => {
+          return <TradeCardOutput key={cryp.id} cryp={cryp} />;
+        })}
+      </section>
     </div>
   );
 }
