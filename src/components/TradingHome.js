@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 // import "./App.css";
-import TradeDis from "./TradeDis";
+import TradeForm from "./TradeForm";
 import "semantic-ui-css/semantic.min.css";
 import TradeCardOutput from "./TradeCardOutput";
-import OutputTrade from "./OutputTrade";
+import OutputTrade from "./ApiData";
 import TradeNav from "./TradeNav";
 import axios from "axios";
+import ApiData from "./ApiData";
 
 function TradingHome() {
   const [trade, setTrade] = useState([]);
@@ -31,11 +32,11 @@ function TradingHome() {
     <div className="App">
       <TradeNav />
       <h1>We are Trading Now</h1>
-      <TradeDis teamAdd={tradeChange} />
+      <TradeForm teamAdd={tradeChange} />
       <h2>Here are your Trades!</h2>
       <div>
         {trade.map((result, index) => (
-          <OutputTrade key={index} newResult={result} />
+          <ApiData key={index} newResult={result} />
         ))}
       </div>
 
