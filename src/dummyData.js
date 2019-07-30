@@ -1,4 +1,4 @@
-data = [
+const data = [
 {
     stockName: "APPL",
     stockPrice: 203,
