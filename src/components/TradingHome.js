@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
-import TradeDis from "./components/TradeDis";
+// import "./App.css";
+import TradeForm from "./TradeForm";
 import "semantic-ui-css/semantic.min.css";
-import TradeCardOutput from "./components/TradeCardOutput";
-import OutputTrade from "./components/OutputTrade";
-import TradeNav from "./components/TradeNav";
-import TradeNav from "./components/TradeNav";
+import TradeCardOutput from "./TradeCardOutput";
+import OutputTrade from "./ApiData";
+import TradeNav from "./TradeNav";
+import axios from "axios";
+import ApiData from "./ApiData";
 
 function TradingHome() {
   const [trade, setTrade] = useState([]);
@@ -29,22 +30,21 @@ function TradingHome() {
 
   return (
     <div className="App">
+      <TradeNav />
+      <h1>We are Trading Now</h1>
+      <TradeForm teamAdd={tradeChange} />
+      <h2>Here are your Trades!</h2>
+      <div>
+        {trade.map((result, index) => (
+          <ApiData key={index} newResult={result} />
+        ))}
+      </div>
+
       <section className="crypto-list grid-view">
         {crypto.map(cryp => {
           return <TradeCardOutput key={cryp.id} cryp={cryp} />;
         })}
       </section>
-      <TradeNav />
-      <h1>We are Trading Now</h1>
-      <TradeDis teamAdd={tradeChange} />
-      <h2>Here are your Trades!</h2>
-      <div>
-        {trade.map((result, index) => (
-          <OutputTrade key={index} newResult={result} />
-        ))}
-      </div>
-
-      <TradeCardOutput />
     </div>
   );
 }

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button, Form, Segment } from "semantic-ui-react";
 import "semantic-ui-css/semantic.min.css";
 
-export default function TradeDis(props) {
+export default function TradeForm(props) {
   const [user, setUser] = useState({
     name: "",
     AcctNumber: "",

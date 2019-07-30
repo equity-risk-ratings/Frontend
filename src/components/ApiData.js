@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Icon } from "semantic-ui-react";
 
-export default function OutputTrade({ newResult }) {
+export default function ApiData({ newResult }) {
   console.log("i am a prop", newResult);
 
   return (
@@ -19,12 +19,5 @@ export default function OutputTrade({ newResult }) {
         </Card.Content>
       </Card>
     </Card.Group>
-
-    // <div className="results-container">
-    //   <h3>Name: {newResult.name}</h3>
-    //   <h3>ACCT: {newResult.AcctNumber}</h3>
-    //   <h3>TICKER: {newResult.TickerSymbol}</h3>
-    //   <h3>QTY: {newResult.Quantity}</h3>
-    // </div>
   );
 }

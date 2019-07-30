@@ -1,7 +1,8 @@
 import React from "react";
 import { Card, Image, Icon } from "semantic-ui-react";
 
-export default function CharacterCard({ cryp }) {
+export default function TradeCardOutput({ cryp }) {
+  console.log("testProps: ", cryp);
   return (
     <Card>
       <Image src={cryp.image} wrapped ui={false} />
