@@ -28,11 +28,6 @@ function TradingHome() {
 
   return (
     <div className="App">
-      <section className="crypto-list grid-view">
-        {crypto.map(cryp => {
-          return <TradeCardOutput key={cryp.id} cryp={cryp} />;
-        })}
-      </section>
       <TradeNav />
       <h1>We are Trading Now</h1>
       <TradeDis teamAdd={tradeChange} />
@@ -42,7 +37,11 @@ function TradingHome() {
           <OutputTrade key={index} newResult={result} />
         ))}
       </div>
-      <TradeCardOutput />
+      <section className="crypto-list grid-view">
+        {crypto.map(cryp => {
+          return <TradeCardOutput key={cryp.id} cryp={cryp} />;
+        })}
+      </section>
     </div>
   );
 }
