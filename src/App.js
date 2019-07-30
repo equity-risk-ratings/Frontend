@@ -1,33 +1,22 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
+import 'semantic-ui-css/semantic.min.css'
 import TradeDis from "./components/TradeDis";
-import SignIn from './components/auth/SignIn';
-import SignUp from './components/auth/SignUp';
+import SignIn from './components/signin/SignIn';
+import SignUp from './components/signup/SignUp';
+import Home from './components/home/Home';
 
 function App() {
   return (
     <div className="App">
-      <h1>App.js</h1>
       <Router>
         <div>
-          <nav>
-            <ul>
-              <li>
-                <Link to="/signin">Sign In</Link>
-              </li>
-              <li>
-                <Link to="/signup">Sign Up</Link>
-              </li>
-              <li>
-                <Link to="trade-card">Trade Cards</Link>
-              </li>
-            </ul>
-          </nav>
           <Switch>
-            <Route path='/signin' component={SignIn} />
-            <Route path='/signup' component={SignUp} />
-            <Route path='/trade-card' component={TradeDis} />
+            <Route exact path='/' component={Home} />
+            <Route exact path='/signin' component={SignIn} />
+            <Route exact path='/signup' component={SignUp} />
+            <Route exact path='/trade-card' component={TradeDis} />
           </Switch>
         </div>
       </Router>

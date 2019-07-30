@@ -1,0 +1,9 @@
+.ui.container {
+  width: 550px;
+  padding: 15px;
+  margin: 100px auto;
+}
+.ui.form {
+  width: 60%;
+  margin: 25px auto;
+}
