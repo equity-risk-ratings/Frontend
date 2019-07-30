@@ -1,14 +1,27 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
-import TradeDis from "./components/TradeDis";
 import "semantic-ui-css/semantic.min.css";
-import TradeCardOutput from "./components/TradeCardOutput";
-import OutputTrade from "./components/OutputTrade";
-import TradeNav from "./components/TradeNav";
-import axios from "axios";
+import TradeDis from "./components/TradeDis";
+import SignIn from "./components/signin/SignIn";
+import SignUp from "./components/signup/SignUp";
+import Home from "./components/home/Home";
 
 function App() {
-  return <div className="App" />;
+  return (
+    <div className="App">
+      <Router>
+        <div>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/signin" component={SignIn} />
+            <Route exact path="/signup" component={SignUp} />
+            <Route exact path="/trade-card" component={TradeDis} />
+          </Switch>
+        </div>
+      </Router>
+    </div>
+  );
 }
 
 export default App;
