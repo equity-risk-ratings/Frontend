@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
-import TradeDis from "./components/TradeDis";
+import axios from 'axios';
 import "semantic-ui-css/semantic.min.css";
+import TradeDis from "./components/TradeDis";
 import TradeCardOutput from "./components/TradeCardOutput";
 import OutputTrade from "./components/OutputTrade";
-import TradeNav from "./components/TradeNav";
 import TradeNav from "./components/TradeNav";
 
 function TradingHome() {
