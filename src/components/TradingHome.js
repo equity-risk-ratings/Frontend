@@ -6,6 +6,7 @@ import OutputTrade from "./ApiData";
 import TradeNav from "./TradeNav";
 import axios from "axios";
 import ApiData from "./ApiData";
+import { Search, Grid, Header, Segment } from "semantic-ui-react";
 
 function TradingHome() {
   const [trade, setTrade] = useState([]);
@@ -30,9 +31,10 @@ function TradingHome() {
   return (
     <div className="App">
       <TradeNav />
-      <h1>We are Trading Now</h1>
+
+      <h1>Traders View</h1>
       <TradeForm teamAdd={tradeChange} />
-      <h2>Here are your Trades!</h2>
+      <h2>Recent Transactions</h2>
       <div>
         {trade.map((result, index) => (
           <ApiData key={index} newResult={result} />

@@ -65,7 +65,7 @@ export default function TradeForm(props) {
           />
         </Form.Group>
         <Form.Checkbox label="I agree to the Terms of the Trade Conditions" />
-        <Button type="submit">Trade</Button>
+        <Button type="submit">Execute Trade</Button>
       </Form>
     </Segment>
   );

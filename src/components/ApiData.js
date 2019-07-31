@@ -5,7 +5,7 @@ export default function ApiData({ newResult }) {
   console.log("i am a prop", newResult);
 
   return (
-    <Card.Group centered itemsPerRow={4}>
+    <Card.Group style={{ margin: 20 }}>
       <Card>
         <Card.Content header={newResult.name} />
         <Card.Meta>{newResult.TickerSymbol}</Card.Meta>

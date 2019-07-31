@@ -4,7 +4,7 @@ import { Card, Image } from "semantic-ui-react";
 export default function TradeCardOutput({ cryp }) {
   console.log("testProps: ", cryp);
   return (
-    <Card>
+    <Card centered>
       <Image src={cryp.image} wrapped ui={false} />
       <Card.Content>
         <Card.Header>{cryp.name}</Card.Header>
