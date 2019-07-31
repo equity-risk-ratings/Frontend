@@ -25,6 +25,7 @@ export default function TradeForm(props) {
     event.preventDefault();
     console.log("TEST:", user);
     props.teamAdd(user);
+    setUser({ name: "", AcctNumber: "", TickerSymbol: "", Quantity: "" });
   };
 
   return (

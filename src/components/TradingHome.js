@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import TradeForm from "./TradeForm";
 import "semantic-ui-css/semantic.min.css";
-import TradeCardOutput from "./TradeCardOutput";
-import OutputTrade from "./ApiData";
+// import TradeCardOutput from "./TradeCardOutput";
+// import SearchExampleStandard from "./SearchTrade";
+// import OutputTrade from "./ApiData";
 import TradeNav from "./TradeNav";
 import axios from "axios";
 import ApiData from "./ApiData";
-import { Card, Header, Table, Rating } from "semantic-ui-react";
+import { Header, Table, Button } from "semantic-ui-react";
 
 function TradingHome() {
   const [trade, setTrade] = useState([]);
@@ -31,22 +32,8 @@ function TradingHome() {
   };
 
   return (
-    <div className="App">
+    <div className="TradingHome">
       <TradeNav />
-      <h1>Traders View</h1>
-      <TradeForm teamAdd={tradeChange} />
-      <h2>Recent Transactions</h2>
-      <div>
-        {trade.map((result, index) => (
-          <ApiData key={index} newResult={result} />
-        ))}
-      </div>
-      {/* <section className="crypto-list grid-view">
-        {crypto.map(cryp => {
-          return <TradeCardOutput key={cryp.id} cryp={cryp} />;
-        })}
-      </section> */}
-
       <Table celled padded>
         <Table.Header color="teal">
           <Table.Row>
@@ -85,6 +72,15 @@ function TradingHome() {
           <Table.Row />
         </Table.Body>
       </Table>
+
+      <h1>Trader Execution</h1>
+      <TradeForm teamAdd={tradeChange} />
+      <h2>Recent Transactions</h2>
+      <div className="results">
+        {trade.map((result, index) => (
+          <ApiData key={index} newResult={result} />
+        ))}
+      </div>
     </div>
   );
 }
