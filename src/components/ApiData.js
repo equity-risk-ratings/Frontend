@@ -20,4 +20,4 @@ export default function ApiData({ newResult }) {
       </Card>
     </Card.Group>
   );
-}
+};
