@@ -57,20 +57,5 @@ export default function TradeCardOutput({ cryp }) {
         </Table.Row>
       </Table.Body>
     </Table>
-
-    // <Card centered>
-    //   <Image src={cryp.image} wrapped ui={false} />
-    //   <Card.Content>
-    //     <Card.Header>{cryp.name}</Card.Header>
-    //     <Card.Meta>{cryp.species}</Card.Meta>
-    //     <Card.Description>{cryp.location.name}</Card.Description>
-    //   </Card.Content>
-    /* <Card.Content extra>
-        <a>
-          <Icon name="user" />
-          episodes
-        </a>
-      </Card.Content> */
-    // </Card>
   );
-}
+};
