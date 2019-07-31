@@ -22,7 +22,8 @@ export default function ApiData({ newResult }) {
     <Card.Group centered>
       <Card>
         <Card.Content>
-          <Card.Header>{newResult.name}</Card.Header>
+          <Card.Header>Name: {newResult.name}</Card.Header>
+          <Card.Meta>Trading Acct: {newResult.AcctNumber}</Card.Meta>
           <Card.Meta>Ticker: {newResult.TickerSymbol}</Card.Meta>
           <Card.Description>
             Updated Portfolio: {newResult.Quantity}{" "}
@@ -31,4 +32,4 @@ export default function ApiData({ newResult }) {
       </Card>
     </Card.Group>
   );
-};
+}
