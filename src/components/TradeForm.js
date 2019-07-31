@@ -28,13 +28,13 @@ export default function TradeForm(props) {
   };
 
   return (
-    <Segment inverted>
+    <Segment inverted color="teal">
       <Form inverted onSubmit={handleSubmit}>
         <Form.Group widths="equal">
           <Form.Input
             name="name"
             fluid
-            label="name"
+            label="Name"
             placeholder="Username"
             value={user.name}
             onChange={event => handleChange(event)}
@@ -42,7 +42,7 @@ export default function TradeForm(props) {
           <Form.Input
             name="AcctNumber"
             fluid
-            label="Acct Number"
+            label="Trading Acct Number"
             placeholder="####"
             value={user.AcctNumber}
             onChange={event => handleChange(event)}
@@ -59,7 +59,7 @@ export default function TradeForm(props) {
             name="Quantity"
             fluid
             label="Quantity"
-            placeholder="#Qty"
+            placeholder="#Qty+/-"
             value={user.Quantity}
             onChange={event => handleChange(event)}
           />
