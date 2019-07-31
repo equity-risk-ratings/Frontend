@@ -1,15 +1,15 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
-import "semantic-ui-css/semantic.min.css";
+import "semantic-ui-css/semantic.min.css"; 
 import TradingHome from "./components/TradingHome";
 import SignIn from "./components/signin/SignIn";
 import SignUp from "./components/signup/SignUp";
 import Home from "./components/home/Home";
-import ReactVis from './components/alpha-vantage/ReactVis';
 
 function App() {
-  return (
+   
+    return ( 
     <div className="App">
       <Router>
         <div>
@@ -18,7 +18,6 @@ function App() {
             <Route exact path="/signin" component={SignIn} />
             <Route exact path="/signup" component={SignUp} />
             <Route exact path="/trade-card" component={TradingHome} />
-            <Route exact path="/test" component={ReactVis} />
           </Switch>
         </div>
       </Router>
