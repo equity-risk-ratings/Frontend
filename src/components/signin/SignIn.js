@@ -21,8 +21,8 @@ function SignIn(props) {
     axios
       .post("https://equity-risks.herokuapp.com/api/auth/login", loginInfo)
       .then(res => {
-      localStorage.setItem('token', res.data.token)
-        props.history.push('/trade-card')
+        localStorage.setItem("token", res.data.token);
+        props.history.push("/trade-card");
       })
       .catch(err => console.log(err));
   };

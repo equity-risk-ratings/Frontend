@@ -6,11 +6,11 @@ import TradingHome from "./components/TradingHome";
 import SignIn from "./components/signin/SignIn";
 import SignUp from "./components/signup/SignUp";
 import Home from "./components/home/Home";
-import Quote from './components/quote/Quote';
-import UserProfile from './components/UserProfile';
+import Quote from "./components/quote/Quote";
+import UserProfile from "./components/UserProfile";
+/* import Data from "./Data";
+import automatedDataset from "./components/dataMap"; */
 
-import Data from './Data';
-import automatedDataset from './components/dataMap';
 function App() {
   return (
     <div className="App">

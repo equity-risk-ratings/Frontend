@@ -1,17 +1,17 @@
-import React from 'react';
+import React from "react";
 
-import DataHardData from './components/DataHardData';
-import Chart from './components/Chart';
+import DataHardData from "./components/DataHardData";
+import Chart from "./components/Chart";
 
-import './components/basicStyles/Data.css';
+import "./components/basicStyles/Data.css";
 
 const Data = () => {
-    return (
-        <section className="dataContainer">
-            <DataHardData />
-            <Chart />
-        </section>
-    )
-}
+  return (
+    <section className="dataContainer">
+      <DataHardData />
+      <Chart />
+    </section>
+  );
+};
 
 export default Data;

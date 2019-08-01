@@ -13,37 +13,45 @@ import {
 // import "./UserProfile.css";
 
 const UserProfile = props => {
-  console.log('Passed in props', props);
-  const [updateInfo, setUpdateInfo] = React.useState(props)
-  const [editing, setEditing] = React.useState(false)
- console.log('My State', updateInfo)
+  console.log(props);
+  const [updateInfo, setUpdateInfo] = React.useState({ props });
+  const [/* editing,  */ setEditing] = React.useState(false);
 
   const handleChange = event => {
-    const { name, value } = event.target
-    setUpdateInfo({...updateInfo, [name]: value })
-  }
+    const { name, value } = event.target;
+    setUpdateInfo({ ...updateInfo, [name]: value });
+  };
 
   const updateProfile = event => {
     event.preventDefault();
-   
+    axios
+      .get("https://equity-risks.herokuapp.com/api/users/:id")
+      .then(res => {
+        console.log(res.data);
+      })
+      .catch(err => {
+        console.log(err);
+      });
     setUpdateInfo();
   };
 
   const deleteProfile = id => {
-   setUpdateInfo( updateInfo.filter(user => user.id !== id))
-   setEditing(false)
+    setUpdateInfo(updateInfo.filter(user => user.id !== id));
+    setEditing(false);
   };
 
-  useEffect( ( ) => {
-    axios 
-    .get(`https://equity-risks.herokuapp.com/api/users/${props.match.params.id}`)
-    .then((res) => {
-      console.log(res.data);
-    } )
-    .catch((err) => {
-      console.log(err)
-    })
-  }, [] )
+  useEffect(() => {
+    axios
+      .get(
+        `https://equity-risks.herokuapp.com/api/users/${props.match.params.id}`
+      )
+      .then(res => {
+        console.log(res.data);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }, []);
 
   return (
     <Container>
@@ -86,7 +94,7 @@ const UserProfile = props => {
             onChange={handleChange}
           />
         </Form.Field>
-       
+
         <Button color="teal" onClick={updateProfile}>
           Edit Profile
         </Button>
