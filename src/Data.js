@@ -1,13 +1,13 @@
 import React from 'react';
 
 import DataHardData from './components/DataHardData';
-import DataShowcase from './components/DataShowcase';
+import Chart from './components/Chart';
 
 const Data = () => {
     return (
         <section>
             <DataHardData />
-            <DataShowcase />
+            <Chart />
         </section>
     )
 }

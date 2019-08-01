@@ -6,7 +6,7 @@ import SignIn from './components/auth/SignIn';
 import SignUp from './components/auth/SignUp';
 
 import Data from './Data';
-
+import automatedDataset from './components/dataMap';
 function App() {
   return (
     <div className="App">

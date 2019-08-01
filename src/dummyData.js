@@ -1,7 +1,7 @@
 const data = [
 {
     stockName: "APPL",
-    stockPrice: 203,
+    stockPrice: [203, 150, 34, 198],
     changeDollar: "+1.94",
     changePercent: "2%"
 },
