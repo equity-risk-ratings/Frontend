@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import TradeForm from "./TradeForm";
 import "semantic-ui-css/semantic.min.css";
 import TradeNav from "./TradeNav";
+
 import axios from "axios";
 import ApiData from "./ApiData";
 import { Header, Table } from "semantic-ui-react";
@@ -9,42 +10,38 @@ import { Header, Table } from "semantic-ui-react";
 function TradingHome() {
   const [trade, setTrade] = useState([]);
   const [crypto, setCrypto] = useState([]);
+  const [stock, setStock] = useState("MSFT");
 
   useEffect(() => {
     axios
       .get(
-        "https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=GOOGL&apikey=LKWC7HB4USLTPXIL"
+        `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${stock}&apikey=LKWC7HB4USLTPXIL`
       )
       .then(res => {
-        console.log("Crypto data:", res.data["Global Quote"]);
+        console.log("Api data:", res.data["Global Quote"]);
         setCrypto(res.data["Global Quote"]);
       })
       .catch(error => {
         console.error(error);
       });
-  }, []);
+  }, [stock]);
 
   const tradeChange = newTrade => {
     setTrade([...trade, newTrade]);
   };
-
+  console.log("state check:", setStock);
   return (
-    <div className="App">
+    <div className="TradingHome">
       <TradeNav />
-      <h1>Traders View</h1>
-      <TradeForm teamAdd={tradeChange} />
-      <h2>Recent Transactions</h2>
-      <div>
-        {trade.map((result, index) => (
-          <ApiData key={index} newResult={result} />
-        ))}
-      </div>
-      {/* <section className="crypto-list grid-view">
-        {crypto.map(cryp => {
-          return <TradeCardOutput key={cryp.id} cryp={cryp} />;
-        })}
-      </section> */}
-
+      <h3>Favorites</h3>
+      <button onClick={() => setStock("MSFT")}>Microsoft</button>
+      <button onClick={() => setStock("FB")}>Facebook</button>
+      <button onClick={() => setStock("ATVI")}>Blizzard</button>
+      <button onClick={() => setStock("SPY")}>Spyder</button>
+      <button onClick={() => setStock("GOOG")}>Google</button>
+      <button onClick={() => setStock("AMZN")}>Amazon</button>
+      <button onClick={() => setStock("NVDA")}>Nvidia</button>
+      <button onClick={() => setStock("W")}>Wayfair</button>
       <Table celled padded>
         <Table.Header color="teal">
           <Table.Row>
@@ -83,8 +80,19 @@ function TradingHome() {
           <Table.Row />
         </Table.Body>
       </Table>
+
+      <h1>Trader Execution</h1>
+      <TradeForm teamAdd={tradeChange} />
+      <h2>Recent Transactions</h2>
+      <div className="results">
+        {trade.map((result, index) => (
+          <ApiData key={index} newResult={result} />
+        ))}
+      </div>
     </div>
   );
 }
 
 export default TradingHome;
+
+// 'https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=MSFT&apikey=LKWC7HB4USLTPXIL'
