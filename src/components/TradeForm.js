@@ -25,6 +25,7 @@ export default function TradeForm(props) {
     event.preventDefault();
     console.log("TEST:", user);
     props.teamAdd(user);
+    setUser({ name: "", AcctNumber: "", TickerSymbol: "", Quantity: "" });
   };
 
   return (
@@ -65,7 +66,9 @@ export default function TradeForm(props) {
           />
         </Form.Group>
         <Form.Checkbox label="I agree to the Terms of the Trade Conditions" />
-        <Button type="submit">Execute Trade</Button>
+        <Button color="#08BD31" type="submit">
+          Execute Trade
+        </Button>
       </Form>
     </Segment>
   );
