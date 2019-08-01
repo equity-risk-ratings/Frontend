@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import TradeForm from "./TradeForm";
 import "semantic-ui-css/semantic.min.css";
+import CommitModal from "./CommitModal";
 
 import TradeNav from "./TradeNav";
 
@@ -12,6 +13,12 @@ function TradingHome() {
   const [trade, setTrade] = useState([]);
   const [crypto, setCrypto] = useState([]);
   const [stock, setStock] = useState("VIRT");
+
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const toggleModal = () => {
+    setModalOpen(!modalOpen);
+  };
 
   useEffect(() => {
     axios
@@ -159,13 +166,18 @@ function TradingHome() {
       </Table>
 
       <h1>Trader Execution</h1>
+
+      <Button color="red" onClick={toggleModal}>
+        Halt Trading
+      </Button>
       <TradeForm teamAdd={tradeChange} />
-      <h2>Recent Transactions</h2>
+      <h2 color="lightGray">Recent Transactions</h2>
       <div className="results">
         {trade.reverse().map((result, index) => (
           <FormOutput key={index} newResult={result} />
         ))}
       </div>
+      {modalOpen ? <CommitModal toggleModal={toggleModal} /> : null}
     </div>
   );
 }
