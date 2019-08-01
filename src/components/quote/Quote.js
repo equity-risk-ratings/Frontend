@@ -6,18 +6,56 @@ import './Quote.css';
 function Quote() {
   const [state, setState] = React.useState({});
   const [ticker, setTicker] = React.useState();
+  const [data, setData] = React.useState({
+    symbol: state['01. symbol'],
+    open: '',
+    high: '',
+    low: '',
+    price: '',
+    volume: '',
+    leatestTradingDay: '',
+    change: '',
+    changePercent: '',
+  })
 
   React.useEffect(() => {
     axios
       .get(`https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${ticker}&apikey=LKWC7HB4USLTPXIL`)
       .then(res => {
         setState(res.data['Global Quote']);
-        console.log('%cState was successfully set 👍', 'color: green;')
+        console.log('%cState was successfully set 👍', 'color: green;');
+        console.log(state);
       })
       .catch(err => {
         console.log('Error Caught:', err);
       });
-  }, [ticker]);
+  }, [data, state, ticker]);
+  /*
+    React.useEffect(() => {
+      setData({
+        symbol: state['01. symbol'],
+        open: state['02. open'],
+        high: state['03. high'],
+        low: state['04. low'],
+        price: state['05. price'],
+        volume: state['06. symbol'],
+        leatestTradingDay: state['07. symbol'],
+        change: state['09. symbol'],
+        changePercent: state['10. symbol'],
+      });
+    }, [data, state]); */
+
+  /* symbol: ['01. symbol'],
+    open: ['02. open'],
+    high: ['03. high'],
+    low: ['04. low'],
+    price: ['05. price'],
+    volume: ['06. symbol'],
+    leatestTradingDay: ['07. symbol'],
+    change: ['09. symbol'],
+    changePercent: ['10. symbol'], */
+
+  /* const { symbol, open, high, low, price, volume, leatestTradingDay, change, changePercent } = data; */
 
   return (
     <div>
@@ -27,7 +65,6 @@ function Quote() {
           placeholder='Ticker Symbol'
           value={ticker}
           onChange={e => setTicker(e.target.value)}
-        /* {e => setTicker(e.target.value)} */
         />
         <Segment>
           <Statistic horizontal color='teal'>
