@@ -17,15 +17,14 @@ function SignUp(props) {
   const [email, setEmail] = React.useState();
   const [password, setPassword] = React.useState();
 
-  console.log({ firstName, lastName, email, password });
-
   const register = event => {
     event.preventDefault();
     const regInfo = { firstName, lastName, email, password };
+    console.log('Info', regInfo)
     axios
-      .post("http://equity-risks.herokuapp/api/auth/register", regInfo)
-      .then(res => props.history.push("/signin"))
-      .catch(err => console.log(err.response.message));
+      .post("https://equity-risks.herokuapp/api/auth/register", regInfo)
+      .then(res => {console.log('data', res) ; props.history.push("/signin")})
+      .catch(err => console.log(err.response));
   };
 
   return (
