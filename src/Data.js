@@ -3,9 +3,11 @@ import React from 'react';
 import DataHardData from './components/DataHardData';
 import Chart from './components/Chart';
 
+import './components/basicStyles/Data.css';
+
 const Data = () => {
     return (
-        <section>
+        <section className="dataContainer">
             <DataHardData />
             <Chart />
         </section>
