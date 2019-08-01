@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
 import TradeForm from "./TradeForm";
 import "semantic-ui-css/semantic.min.css";
-import TradeCardOutput from "./TradeCardOutput";
-import OutputTrade from "./ApiData";
 import TradeNav from "./TradeNav";
 import axios from "axios";
 import ApiData from "./ApiData";
-import { Card, Header, Table, Rating } from "semantic-ui-react";
+import { Header, Table } from "semantic-ui-react";
 
 function TradingHome() {
   const [trade, setTrade] = useState([]);
