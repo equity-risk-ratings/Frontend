@@ -15,7 +15,7 @@ import {
 const UserProfile = props => {
   console.log(props);
   const [updateInfo, setUpdateInfo] = React.useState({ props });
-  const [editing, setEditing] = React.useState(false);
+  const [/* editing,  */ setEditing] = React.useState(false);
 
   const handleChange = event => {
     const { name, value } = event.target;

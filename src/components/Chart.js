@@ -8,7 +8,7 @@ let dataVariable = {
   datasets: automatedDataset
 };
 
-let dataVariableTest = {
+/* let dataVariableTest = {
   labels: ["July 29th", "July 30th", "July 31st", "Aug 1st"],
   datasets: [
     {
@@ -21,9 +21,7 @@ let dataVariableTest = {
       radius: 2
     }
   ]
-};
-
-class Chart extends Component {
+} */ class Chart extends Component {
   constructor(props) {
     super(props);
     this.state = {};

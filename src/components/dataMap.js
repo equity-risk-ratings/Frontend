@@ -152,6 +152,7 @@ const CSS_COLOR_NAMES = [
 ];
 let automatedDataset = [];
 
+// eslint-disable-next-line
 data.map((stock, index) => {
   automatedDataset.push({
     label: `${stock.stockName}`,
