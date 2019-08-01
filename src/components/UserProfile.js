@@ -1,12 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import {
   Container,
   Header,
   Icon,
   Form,
   Input,
-  Button
+  Button,
+  Divider
 } from "semantic-ui-react";
 // import "./UserProfile.css";
 
@@ -64,19 +64,11 @@ const UserProfile = props => {
             onChange={e => setEmail(e.target.value)}
           />
         </Form.Field>
-        <Form.Field className="form-field">
-          <Input
-            className="input-field"
-            htmlFor="password"
-            placeholder="Password"
-            type="password"
-            id="password"
-            onChange={e => setPassword(e.target.value)}
-          />
-        </Form.Field>
+       
         <Button color="teal" onClick={updateProfile}>
           Edit Profile
         </Button>
+        <Divider hidden />
         <Button color="teal" onClick={deleteProfile}>
           Delete Profile
         </Button>
