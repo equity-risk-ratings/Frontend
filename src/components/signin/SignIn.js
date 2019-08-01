@@ -19,12 +19,12 @@ function SignIn(props) {
     event.preventDefault();
     const loginInfo = { email, password };
     axios
-      .post("https://equity-risks.herokuapp/api/auth/login", loginInfo)
+      .post("https://equity-risks.herokuapp.com/api/auth/login", loginInfo)
       .then(res => {
       localStorage.setItem('token', res.data.token)
         props.history.push('/trade-card')
       })
-      .catch(err => console.log(err.response.message));
+      .catch(err => console.log(err.Response.message));
   };
 
   console.log({ email, password });

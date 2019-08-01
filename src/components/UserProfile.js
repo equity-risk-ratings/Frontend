@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 import {
   Container,
   Header,
@@ -8,6 +9,7 @@ import {
   Button,
   Divider
 } from "semantic-ui-react";
+
 // import "./UserProfile.css";
 
 const UserProfile = props => {
@@ -23,6 +25,14 @@ const UserProfile = props => {
 
   const updateProfile = event => {
     event.preventDefault();
+    axios 
+      .get('https://equity-risks.herokuapp.com/api/users/:id')
+      .then((res) => {
+        console.log(res.data);
+      } )
+      .catch((err) => {
+        console.log(err)
+      })
     setUpdateInfo();
   };
 
