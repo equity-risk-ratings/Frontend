@@ -80,6 +80,15 @@ export default class TradeNav extends Component {
             <Input icon="search" placeholder="Search..." />
           </Menu.Item>
           <Menu.Item
+          name="UserProfile"
+          as={Nav}
+          to={"/user-profile"}
+          active={activeItem === "UserProfile"}
+          onClick={this.handleItemClick}
+        >
+          User Profile
+        </Menu.Item>
+          <Menu.Item
             name="logout"
             active={activeItem === "logout"}
             onClick={this.handleItemClick}

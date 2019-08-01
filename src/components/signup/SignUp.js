@@ -22,7 +22,7 @@ function SignUp(props) {
     const regInfo = { firstName, lastName, email, password };
     console.log('Info', regInfo)
     axios
-      .post("https://equity-risks.herokuapp/api/auth/register", regInfo)
+      .post("https://equity-risks.herokuapp.com/api/auth/register", regInfo)
       .then(res => {console.log('data', res) ; props.history.push("/signin")})
       .catch(err => console.log(err.response));
   };
