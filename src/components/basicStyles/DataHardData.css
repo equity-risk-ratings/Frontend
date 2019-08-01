@@ -1,0 +1,13 @@
+.stockContainer {
+    border: solid;
+    background-color: grey;
+    width: 50%;
+} 
+.container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container div {
+    width: 25%;
+}
