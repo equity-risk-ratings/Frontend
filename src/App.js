@@ -7,6 +7,7 @@ import SignIn from "./components/signin/SignIn";
 import SignUp from "./components/signup/SignUp";
 import Home from "./components/home/Home";
 import Quote from './components/quote/Quote';
+import UserProfile from './components/UserProfile';
 import Test from './components/test-component/Test';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <Route exact path="/signin" component={SignIn} />
             <Route exact path="/signup" component={SignUp} />
             <Route exact path="/trade-card" component={TradingHome} />
+            <Route exact path="/user-profile" component={UserProfile} />
             <Route exact path="/quote" component={Quote} />
             <Route exact path="/test" component={Test} />
           </Switch>
