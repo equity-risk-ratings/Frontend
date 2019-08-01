@@ -5,13 +5,13 @@ import "semantic-ui-css/semantic.min.css";
 import TradeNav from "./TradeNav";
 
 import axios from "axios";
-import ApiData from "./ApiData";
-import { Header, Table } from "semantic-ui-react";
+import FormOutput from "./FormOutput";
+import { Header, Table, Button, Icon } from "semantic-ui-react";
 
 function TradingHome() {
   const [trade, setTrade] = useState([]);
   const [crypto, setCrypto] = useState([]);
-  const [stock, setStock] = useState("MSFT");
+  const [stock, setStock] = useState("VIRT");
 
   useEffect(() => {
     axios
@@ -34,15 +34,91 @@ function TradingHome() {
   return (
     <div className="TradingHome">
       <TradeNav />
-      <h3>Favorites</h3>
-      <button onClick={() => setStock("MSFT")}>Microsoft</button>
-      <button onClick={() => setStock("FB")}>Facebook</button>
-      <button onClick={() => setStock("ATVI")}>Blizzard</button>
-      <button onClick={() => setStock("SPY")}>Spyder</button>
-      <button onClick={() => setStock("GOOG")}>Google</button>
-      <button onClick={() => setStock("AMZN")}>Amazon</button>
-      <button onClick={() => setStock("NVDA")}>Nvidia</button>
-      <button onClick={() => setStock("W")}>Wayfair</button>
+      <h3>My Favorites</h3>
+
+      <Button
+        basic
+        color="teal"
+        content="Microsoft"
+        onClick={() => setStock("MSFT")}
+      />
+
+      <Button
+        basic
+        color="teal"
+        content="Facebook"
+        onClick={() => setStock("FB")}
+      />
+
+      <Button
+        basic
+        color="teal"
+        content="Blizzard"
+        onClick={() => setStock("ATVI")}
+      />
+
+      <Button
+        basic
+        color="teal"
+        content="Spyder"
+        onClick={() => setStock("SPY")}
+      />
+
+      <Button
+        basic
+        color="teal"
+        content="Google"
+        onClick={() => setStock("GOOG")}
+      />
+
+      <Button
+        basic
+        color="teal"
+        content="Amazon"
+        onClick={() => setStock("AMZN")}
+      />
+
+      <Button
+        basic
+        color="teal"
+        content="Nvidia"
+        onClick={() => setStock("NVDA")}
+      />
+
+      <Button
+        basic
+        color="teal"
+        content="Q's"
+        onClick={() => setStock("QQQ")}
+      />
+
+      <Button
+        basic
+        color="teal"
+        content="Apple"
+        onClick={() => setStock("AAPL")}
+      />
+
+      <Button
+        basic
+        color="teal"
+        content="Intel"
+        onClick={() => setStock("INTC")}
+      />
+
+      <Button
+        basic
+        color="teal"
+        content="20yrBOND"
+        onClick={() => setStock("TLT")}
+      />
+      <Button
+        basic
+        color="teal"
+        content="VixEtf"
+        onClick={() => setStock("VXX")}
+      />
+
       <Table celled padded>
         <Table.Header color="teal">
           <Table.Row>
@@ -86,8 +162,8 @@ function TradingHome() {
       <TradeForm teamAdd={tradeChange} />
       <h2>Recent Transactions</h2>
       <div className="results">
-        {trade.map((result, index) => (
-          <ApiData key={index} newResult={result} />
+        {trade.reverse().map((result, index) => (
+          <FormOutput key={index} newResult={result} />
         ))}
       </div>
     </div>
@@ -95,5 +171,3 @@ function TradingHome() {
 }
 
 export default TradingHome;
-
-// 'https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=MSFT&apikey=LKWC7HB4USLTPXIL'
