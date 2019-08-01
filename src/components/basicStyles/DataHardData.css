@@ -1,13 +1,13 @@
 .stockContainer {
-    border: solid;
-    background-color: grey;
-    width: 50%;
-} 
+  border: solid;
+  background-color: grey;
+  width: 50%;
+}
 .container {
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .container div {
-    width: 25%;
+  width: 25%;
 }

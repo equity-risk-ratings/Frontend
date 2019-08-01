@@ -1,9 +1,9 @@
 /* eslint-disable */
-import React from 'react';
+import React from "react";
 /* import { Card, Table, Header, Rating } from 'semantic-ui-react'; */
 
 export default function TradeCardOutput({ cryp }) {
-  console.log('testProps: ', cryp);
+  console.log("testProps: ", cryp);
   return (
     <h1>TradeCardOutput</h1> // To stop linting error
     // <Table celled padded>
