@@ -23,7 +23,7 @@ function SignUp(props) {
     event.preventDefault();
     const regInfo = { firstName, lastName, email, password };
     axios
-      .post("http://localhost:5000/api/auth/register", regInfo)
+      .post("http://equity-risks.herokuapp/api/auth/register", regInfo)
       .then(res => props.history.push("/signin"))
       .catch(err => console.log(err.response.message));
   };

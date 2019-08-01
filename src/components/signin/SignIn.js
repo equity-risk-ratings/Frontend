@@ -19,7 +19,7 @@ function SignIn(props) {
     event.preventDefault();
     const loginInfo = { email, password };
     axios
-      .post("http://localhost:5000/api/auth/login", loginInfo)
+      .post("http://equity-risks.herokuapp/api/auth/login", loginInfo)
       .then(res => {
       localStorage.setItem('token', res.data.token)
         props.history.push('/trade-card')
