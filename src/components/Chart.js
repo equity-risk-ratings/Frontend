@@ -4,7 +4,7 @@ import automatedDataset from './dataMap';
 
 //I definied the Charts data outside of the component
 let dataVariable = {
-    labels: ["match1", "match2", "match3", "match4", "match5"],
+    labels: ["Feb", "March", "April", "May"],
     datasets: automatedDataset
   };
 
@@ -44,7 +44,7 @@ class Chart extends Component{
           options={{
             title:{
               display:this.props.displayTitle,
-              text:'Stock Price',
+              text:'Stock Price (Feb-Jun 2019)',
               fontSize:25
             },
             legend:{
