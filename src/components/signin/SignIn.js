@@ -24,7 +24,7 @@ function SignIn(props) {
       localStorage.setItem('token', res.data.token)
         props.history.push('/trade-card')
       })
-      .catch(err => console.log(err.Response.message));
+      .catch(err => console.log(err));
   };
 
   console.log({ email, password });

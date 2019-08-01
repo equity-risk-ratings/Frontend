@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Line} from 'react-chartjs-2';
+import  { Line } from 'react-chartjs-2';
 import automatedDataset from './dataMap';
 
 //I definied the Charts data outside of the component

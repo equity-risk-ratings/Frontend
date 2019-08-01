@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
-import './App.css';
-import TradeDis from "./components/TradeDis";
-import SignIn from './components/auth/SignIn';
-import SignUp from './components/auth/SignUp';
-=======
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
@@ -16,16 +8,12 @@ import SignUp from "./components/signup/SignUp";
 import Home from "./components/home/Home";
 import Quote from './components/quote/Quote';
 import UserProfile from './components/UserProfile';
->>>>>>> d6de4f51da9f2765330147facc9342d3e97de7d4
 
 import Data from './Data';
 import automatedDataset from './components/dataMap';
 function App() {
   return (
     <div className="App">
-<<<<<<< HEAD
-      <Data />
-=======
       <Router>
         <div>
           <Switch>
@@ -38,7 +26,6 @@ function App() {
           </Switch>
         </div>
       </Router>
->>>>>>> d6de4f51da9f2765330147facc9342d3e97de7d4
     </div>
   );
 }
