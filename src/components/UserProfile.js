@@ -13,6 +13,7 @@ import {
 const UserProfile = props => {
   console.log(props);
   const [updateInfo, setUpdateInfo] = React.useState({props})
+  const [editing, setEditing] = React.useState(false)
  
 
   const handleChange = event => {
@@ -25,8 +26,9 @@ const UserProfile = props => {
     setUpdateInfo();
   };
 
-  const deleteProfile = event => {
-   setUpdateInfo()
+  const deleteProfile = id => {
+   setUpdateInfo( updateInfo.filter(user => user.id !== id))
+   setEditing(false)
   };
 
   return (
