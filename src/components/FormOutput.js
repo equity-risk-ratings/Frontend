@@ -12,7 +12,7 @@ export default function FormOutput({ newResult }) {
           <Card.Meta>Trading Acct: {newResult.AcctNumber}</Card.Meta>
           <Card.Meta>Ticker: {newResult.TickerSymbol}</Card.Meta>
           <Card.Description>
-            Updated Portfolio: {newResult.Quantity}{" "}
+            Portfolio Change: {newResult.Quantity}{" "}
           </Card.Description>
         </Card.Content>
       </Card>
