@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useState } from "react";
 import { Button, Form, Segment } from "semantic-ui-react";
 import "semantic-ui-css/semantic.min.css";
