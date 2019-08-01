@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Menu } from "semantic-ui-react";
+import { Menu, Input } from "semantic-ui-react";
 import { NavLink } from "react-router-dom";
 
 const Nav = props => <NavLink exact {...props} activeClassName="active" />;
@@ -15,7 +15,6 @@ export default class TradeNav extends Component {
     return (
       <Menu color="teal">
         <Menu.Item
-          color="teal"
           name="home"
           as={Nav}
           to={"/"}
@@ -44,6 +43,37 @@ export default class TradeNav extends Component {
         >
           Data Page
         </Menu.Item>
+
+        <Menu.Item
+          name="TradeCard"
+          as={Nav}
+          to={"/trade-card"}
+          active={activeItem === "home"}
+          onClick={this.handleItemClick}
+        >
+          TradeCard
+        </Menu.Item>
+
+        <Menu.Item
+          name="Quotes"
+          as={Nav}
+          to={"/quote"}
+          active={activeItem === "home"}
+          onClick={this.handleItemClick}
+        >
+          Quotes
+        </Menu.Item>
+
+        <Menu.Menu position="right">
+          <Menu.Item>
+            <Input icon="search" placeholder="Search..." />
+          </Menu.Item>
+          <Menu.Item
+            name="logout"
+            active={activeItem === "logout"}
+            onClick={this.handleItemClick}
+          />
+        </Menu.Menu>
       </Menu>
     );
   }
