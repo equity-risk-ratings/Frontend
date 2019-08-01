@@ -1,8 +1,9 @@
-import React from "react";
-import { Card, Icon } from "semantic-ui-react";
+/* eslint-disable */
+import React from 'react';
+import { Card, Icon } from 'semantic-ui-react';
 
 export default function ApiData({ newResult }) {
-  console.log("i am a prop", newResult);
+  console.log('i am a prop', newResult);
 
   return (
     // <Card.Group limit={5} style={{ margin: 20, color: "teal" }}>
@@ -26,7 +27,7 @@ export default function ApiData({ newResult }) {
           <Card.Meta>Trading Acct: {newResult.AcctNumber}</Card.Meta>
           <Card.Meta>Ticker: {newResult.TickerSymbol}</Card.Meta>
           <Card.Description>
-            Updated Portfolio: {newResult.Quantity}{" "}
+            Updated Portfolio: {newResult.Quantity}{' '}
           </Card.Description>
         </Card.Content>
       </Card>

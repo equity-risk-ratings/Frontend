@@ -1,6 +1,6 @@
-import _ from 'lodash';
+/* import _ from 'lodash';
 import React from 'react';
-import axios from "axios";
+import axios from 'axios';
 import { Search, Grid, Segment, Header } from 'semantic-ui-react';
 
 const initialState = {
@@ -8,21 +8,16 @@ const initialState = {
   results: [],
   value: '',
   options: [],
-}
-
-/* const source = _.times(10, () => ({
-  name: '',
-  symbol: '',
-  marketOpen: '',
-  marketClose: '',
-})) */
+};
 
 export default class Test extends React.Component {
-  state = initialState
+  state = initialState;
 
   componentDidUpdate() {
     axios
-      .get(`https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${this.state.value}&apikey=LKWC7HB4USLTPXIL`)
+      .get(
+        `https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${this.state.value}&apikey=LKWC7HB4USLTPXIL`,
+      )
       .then(res => {
         this.setState({ options: res.data['bestMatches'] });
       })
@@ -31,26 +26,27 @@ export default class Test extends React.Component {
       });
   }
 
-  handleResultSelect = (e, { result }) => this.setState({ value: result.title })
+  handleResultSelect = (e, { result }) =>
+    this.setState({ value: result.title });
 
   handleSearchChange = (e, { value }) => {
-    this.setState({ isLoading: true, value })
+    this.setState({ isLoading: true, value });
 
     setTimeout(() => {
-      if (this.state.value.length < 1) return this.setState(initialState)
+      if (this.state.value.length < 1) return this.setState(initialState);
 
-      const re = new RegExp(_.escapeRegExp(this.state.value), 'i')
-      const isMatch = result => re.test(result.title)
+      const re = new RegExp(_.escapeRegExp(this.state.value), 'i');
+      const isMatch = result => re.test(result.title);
 
       this.setState({
         isLoading: false,
-        results: _.filter(/* source */this.state.options, isMatch),
-      })
-    }, 300)
-  }
+        results: _.filter(this.state.options, isMatch),
+      });
+    }, 300);
+  };
 
   render() {
-    const { isLoading, value, results } = this.state
+    const { isLoading, value, results } = this.state;
 
     return (
       <Grid>
@@ -74,11 +70,12 @@ export default class Test extends React.Component {
             </pre>
             <Header>Options</Header>
             <pre style={{ overflowX: 'auto' }}>
-              {JSON.stringify(/* source */this.state.options, null, 2)}
+              {JSON.stringify(this.state.options, null, 2)}
             </pre>
           </Segment>
         </Grid.Column>
       </Grid>
-    )
+    );
   }
 }
+ */
