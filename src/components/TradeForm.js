@@ -65,7 +65,7 @@ export default function TradeForm(props) {
             onChange={event => handleChange(event)}
           />
         </Form.Group>
-        {/* <Form.Checkbox label="I agree to the Terms of the Trade Conditions" /> */}
+
         <Button color="#08BD31" type="submit">
           Execute Trade
         </Button>
