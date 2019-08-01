@@ -1,8 +1,9 @@
-import React from "react";
-import { Card } from "semantic-ui-react";
+/* eslint-disable */
+import React from 'react';
+import { Card } from 'semantic-ui-react';
 
 export default function FormOutput({ newResult }) {
-  console.log("i am a prop", newResult);
+  console.log('i am a prop', newResult);
 
   return (
     <Card.Group centered>
@@ -12,7 +13,7 @@ export default function FormOutput({ newResult }) {
           <Card.Meta>Trading Acct: {newResult.AcctNumber}</Card.Meta>
           <Card.Meta>Ticker: {newResult.TickerSymbol}</Card.Meta>
           <Card.Description>
-            Updated Portfolio: {newResult.Quantity}{" "}
+            Updated Portfolio: {newResult.Quantity}{' '}
           </Card.Description>
         </Card.Content>
       </Card>
