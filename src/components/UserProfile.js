@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import axios from "axios";
 import {
   Container,
@@ -39,6 +39,19 @@ const UserProfile = props => {
     setUpdateInfo(updateInfo.filter(user => user.id !== id));
     setEditing(false);
   };
+
+  useEffect(() => {
+    axios
+      .get(
+        `https://equity-risks.herokuapp.com/api/users/${props.match.params.id}`
+      )
+      .then(res => {
+        console.log(res.data);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }, []);
 
   return (
     <Container>
