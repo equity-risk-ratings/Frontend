@@ -7,7 +7,7 @@ import './components/basicStyles/Data.css';
 
 const Data = () => {
     return (
-        <section className="dataContainer">
+        <section>
             <DataHardData />
             <Chart />
         </section>

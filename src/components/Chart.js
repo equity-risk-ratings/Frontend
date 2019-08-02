@@ -8,18 +8,6 @@ let dataVariable = {
     datasets: automatedDataset
   };
 
-  let dataVariableTest = {
-    labels: ["July 29th", "July 30th", "July 31st", "Aug 1st"],
-    datasets: [{
-      label: `test`,
-      data: [1,2,3],
-      backgroundColor: "red",
-      borderColor: "red",
-      fill: false,
-      lineTension: 0,
-      radius: 2}]
-  };
-
 class Chart extends Component{
   constructor(props){
     super(props);
