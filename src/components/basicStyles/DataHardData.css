@@ -2,6 +2,8 @@
     border: solid;
     background-color: teal;
     width: 50%;
+    margin: 0 auto;
+    border-radius: 10%;
 } 
   
 .stockStockContainer {
