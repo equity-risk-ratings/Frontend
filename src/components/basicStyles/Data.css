@@ -1,3 +1,10 @@
 .dataContainer {
+<<<<<<< HEAD
     color: red;
 }
+=======
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+>>>>>>> c623edb1b05bc6da91ada3adc52042ee8332be42

@@ -1,13 +1,20 @@
 .stockContainer {
+<<<<<<< HEAD
     border: solid;
     background-color: teal;
     width: 50%;
 } 
+=======
+  border: solid;
+  background-color: grey;
+  width: 50%;
+}
+>>>>>>> c623edb1b05bc6da91ada3adc52042ee8332be42
 .container {
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .container div {
-    width: 25%;
+  width: 25%;
 }

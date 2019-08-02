@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from "react";
 import { Card } from "semantic-ui-react";
 
@@ -9,7 +10,7 @@ export default function FormOutput({ newResult }) {
       <Card>
         <Card.Content>
           <Card.Header>Name: {newResult.name}</Card.Header>
-          <Card.Meta>Trading Acct: {newResult.AcctNumber}</Card.Meta>
+          <Card.Meta>Trade Price: {newResult.Price}</Card.Meta>
           <Card.Meta>Ticker: {newResult.TickerSymbol}</Card.Meta>
           <Card.Description>
             Portfolio Change: {newResult.Quantity}{" "}

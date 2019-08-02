@@ -41,7 +41,10 @@ function TradingHome() {
   return (
     <div className="TradingHome">
       <TradeNav />
-      <h3>My Favorites</h3>
+      {/* <h3>My Favorites</h3> */}
+      <Header as="h3" block>
+        My Favorite Equities <Icon name="favorite" color="teal" />
+      </Header>
 
       <Button
         basic
@@ -165,9 +168,16 @@ function TradingHome() {
         </Table.Body>
       </Table>
 
-      <h1>Trader Execution</h1>
+      {/* <h1>Trader Execution</h1> */}
+      <Header as="h2" icon>
+        <Icon name="settings" color="teal" />
+        Trading Interface
+        <Header.Subheader>
+          Enter/Exit and Cancel all trades here
+        </Header.Subheader>
+      </Header>
 
-      <Button color="red" onClick={toggleModal}>
+      <Button fluid color="red" onClick={toggleModal}>
         Halt Trading
       </Button>
       <TradeForm teamAdd={tradeChange} />
