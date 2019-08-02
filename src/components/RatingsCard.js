@@ -3,7 +3,7 @@ import { Card } from "semantic-ui-react";
 
 export default function RatingsCard({ rating }) {
   return (
-    <Card.Group>
+    <Card.Group itemsPerRow={6}>
       <Card>
         <Card.Content>
           <Card.Header>Company:{rating.ticker}</Card.Header>
