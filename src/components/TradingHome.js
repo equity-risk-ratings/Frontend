@@ -3,8 +3,6 @@ import TradeForm from "./TradeForm";
 import "semantic-ui-css/semantic.min.css";
 import CommitModal from "./CommitModal";
 import RatingsList from "./RatingList";
-import Carousel from "semantic-ui-carousel-react";
-
 import TradeNav from "./TradeNav";
 
 import axios from "axios";
@@ -39,12 +37,16 @@ function TradingHome() {
   const tradeChange = newTrade => {
     setTrade([...trade, newTrade]);
   };
+
+  const responsive = [
+    { breakPoint: 1280, cardsToShow: 4 },
+    { breakPoint: 760, cardsToShow: 2 }
+  ];
+
   console.log("state check:", setStock);
   return (
     <div className="TradingHome">
       <TradeNav />
-
-      <RatingsList />
 
       <Header as="h3" block>
         My Favorite Equities <Icon name="favorite" color="teal" />
