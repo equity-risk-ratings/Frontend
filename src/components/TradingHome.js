@@ -46,21 +46,16 @@ function TradingHome() {
   const tradeChange = newTrade => {
     setTrade([...trade, newTrade]);
   };
+
+  const responsive = [
+    { breakPoint: 1280, cardsToShow: 4 },
+    { breakPoint: 760, cardsToShow: 2 }
+  ];
+
   console.log("state check:", setStock);
   return (
     <div className="TradingHome">
       <TradeNav />
-      <Slider {...settings}>
-        <div>
-          <h3>1</h3>
-        </div>
-        <div>
-          <h3>2</h3>
-        </div>
-        <div>
-          <h3>3</h3>
-        </div>
-      </Slider>
       <Header as="h3" block>
         My Favorite Equities <Icon name="favorite" color="teal" />
       </Header>
