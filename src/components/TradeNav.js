@@ -38,7 +38,7 @@ export default class TradeNav extends Component {
         <Menu.Item
           name="DataPage"
           as={Nav}
-          to={"/datapage"}
+          to={"/stock-data"}
           active={activeItem === "DataPage"}
           onClick={this.handleItemClick}
         >
