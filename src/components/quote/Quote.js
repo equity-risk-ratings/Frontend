@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import { Statistic, Segment, Input } from "semantic-ui-react";
 import "./Quote.css";
+import TradeNav from "../TradeNav";
 
 function Quote() {
   const [state, setState] = React.useState({});
@@ -61,6 +62,7 @@ function Quote() {
 
   return (
     <div>
+      <TradeNav />
       <Segment.Group compact raised className="segGroup">
         <Input
           type="text"

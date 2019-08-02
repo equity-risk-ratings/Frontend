@@ -2,9 +2,7 @@ import React, { useState, useEffect } from "react";
 import TradeForm from "./TradeForm";
 import "semantic-ui-css/semantic.min.css";
 import CommitModal from "./CommitModal";
-/* import RatingsList from "./RatingList"; */
 import TradeNav from "./TradeNav";
-
 import axios from "axios";
 import FormOutput from "./FormOutput";
 import { Header, Table, Button, Icon } from "semantic-ui-react";
@@ -13,7 +11,6 @@ function TradingHome() {
   const [trade, setTrade] = useState([]);
   const [crypto, setCrypto] = useState([]);
   const [stock, setStock] = useState("VIRT");
-
   const [modalOpen, setModalOpen] = useState(false);
 
   const toggleModal = () => {
@@ -47,7 +44,6 @@ function TradingHome() {
   return (
     <div className="TradingHome">
       <TradeNav />
-
       <Header as="h3" block>
         My Favorite Equities <Icon name="favorite" color="teal" />
       </Header>
@@ -174,7 +170,6 @@ function TradingHome() {
         </Table.Body>
       </Table>
 
-      {/* <h1>Trader Execution</h1> */}
       <Header as="h2" icon>
         <Icon name="settings" color="teal" />
         Trading Interface
