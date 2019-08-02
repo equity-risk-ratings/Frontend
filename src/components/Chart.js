@@ -8,39 +8,19 @@ let dataVariable = {
   datasets: automatedDataset
 };
 
-<<<<<<< HEAD
 class Chart extends Component{
   constructor(props){
     super(props);
     this.state = {
-=======
-/* let dataVariableTest = {
-  labels: ["July 29th", "July 30th", "July 31st", "Aug 1st"],
-  datasets: [
-    {
-      label: `test`,
-      data: [1, 2, 3],
-      backgroundColor: "red",
-      borderColor: "red",
-      fill: false,
-      lineTension: 0,
-      radius: 2
->>>>>>> c623edb1b05bc6da91ada3adc52042ee8332be42
+      chartData:props.chartData
     }
-  ]
-} */ class Chart extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-    console.log(automatedDataset);
   }
-
   static defaultProps = {
     displayTitle: true,
     displayLegend: true,
     legendPosition: "right",
     location: "City"
-  };
+  }
 
   render() {
     return (
