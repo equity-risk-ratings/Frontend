@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import TradeForm from "./TradeForm";
 import "semantic-ui-css/semantic.min.css";
 import CommitModal from "./CommitModal";
-import RatingsList from "./RatingList";
+/* import RatingsList from "./RatingList"; */
 import TradeNav from "./TradeNav";
 
 import axios from "axios";
@@ -38,10 +38,10 @@ function TradingHome() {
     setTrade([...trade, newTrade]);
   };
 
-  const responsive = [
+  /*   const responsive = [
     { breakPoint: 1280, cardsToShow: 4 },
     { breakPoint: 760, cardsToShow: 2 }
-  ];
+  ]; */
 
   console.log("state check:", setStock);
   return (
