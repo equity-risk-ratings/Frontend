@@ -2,12 +2,11 @@ import React, { useState, useEffect } from "react";
 import TradeForm from "./TradeForm";
 import "semantic-ui-css/semantic.min.css";
 import CommitModal from "./CommitModal";
-import RatingsList from "./Rating/RatingList";
+/* import RatingsList from "./RatingList"; */
 import TradeNav from "./TradeNav";
 import axios from "axios";
 import FormOutput from "./FormOutput";
 import { Header, Table, Button, Icon } from "semantic-ui-react";
-import Slider from "react-slick";
 import "./Rating/slick.css";
 import "./Rating/slick-theme.css";
 
@@ -16,14 +15,6 @@ function TradingHome() {
   const [crypto, setCrypto] = useState([]);
   const [stock, setStock] = useState("VIRT");
   const [modalOpen, setModalOpen] = useState(false);
-
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3
-  };
 
   const toggleModal = () => {
     setModalOpen(!modalOpen);
@@ -47,10 +38,10 @@ function TradingHome() {
     setTrade([...trade, newTrade]);
   };
 
-  const responsive = [
+  /*   const responsive = [
     { breakPoint: 1280, cardsToShow: 4 },
     { breakPoint: 760, cardsToShow: 2 }
-  ];
+  ]; */
 
   console.log("state check:", setStock);
   return (
@@ -182,7 +173,6 @@ function TradingHome() {
         </Table.Body>
       </Table>
 
-      {/* <h1>Trader Execution</h1> */}
       <Header as="h2" icon>
         <Icon name="settings" color="teal" />
         Trading Interface

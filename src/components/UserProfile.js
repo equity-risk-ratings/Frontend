@@ -51,7 +51,7 @@ const UserProfile = props => {
       .catch(err => {
         console.log(err);
       });
-  }, []);
+  }, [props]);
 
   return (
     <Container>

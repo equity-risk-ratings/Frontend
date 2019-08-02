@@ -12,7 +12,7 @@ const DataHardData = () => {
       {/*Maps over the data from API and create divs displays said data*/}
       {data.map(stock => {
         return (
-          <section className="container">
+          <section className="stockStockContainer">
             <div className="stockName">{stock.stockName}</div>
             <div className="stockPrice">{stock.stockPrice}</div>
             <div className="changeDollar">{stock.changeDollar}</div>
