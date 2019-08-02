@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useState } from "react";
 import { Button, Form, Segment } from "semantic-ui-react";
 import "semantic-ui-css/semantic.min.css";
@@ -5,7 +6,7 @@ import "semantic-ui-css/semantic.min.css";
 export default function TradeForm(props) {
   const [user, setUser] = useState({
     name: "",
-    AcctNumber: "",
+    Price: "",
     TickerSymbol: "",
     Quantity: ""
   });
@@ -25,7 +26,7 @@ export default function TradeForm(props) {
     event.preventDefault();
     console.log("TEST:", user);
     props.teamAdd(user);
-    setUser({ name: "", AcctNumber: "", TickerSymbol: "", Quantity: "" });
+    setUser({ name: "", Price: "", TickerSymbol: "", Quantity: "" });
   };
 
   return (
@@ -33,35 +34,36 @@ export default function TradeForm(props) {
       <Form inverted onSubmit={handleSubmit}>
         <Form.Group widths="equal">
           <Form.Input
-            name="name"
-            fluid
-            label="Name"
-            placeholder="Username"
-            value={user.name}
-            onChange={event => handleChange(event)}
-          />
-          <Form.Input
-            name="AcctNumber"
-            fluid
-            label="Trading Acct Number"
-            placeholder="####"
-            value={user.AcctNumber}
-            onChange={event => handleChange(event)}
-          />
-          <Form.Input
             name="TickerSymbol"
             fluid
-            label="Ticker Symbol"
+            label="TickerSymbol"
             placeholder="Symbol"
             value={user.TickerSymbol}
             onChange={event => handleChange(event)}
           />
+
           <Form.Input
             name="Quantity"
             fluid
             label="Quantity"
             placeholder="#Qty+/-"
             value={user.Quantity}
+            onChange={event => handleChange(event)}
+          />
+          <Form.Input
+            name="Price"
+            fluid
+            label="Price"
+            placeholder="####"
+            value={user.Price}
+            onChange={event => handleChange(event)}
+          />
+          <Form.Input
+            name="name"
+            fluid
+            label="Name"
+            placeholder="Username"
+            value={user.name}
             onChange={event => handleChange(event)}
           />
         </Form.Group>

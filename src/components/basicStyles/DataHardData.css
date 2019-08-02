@@ -1,13 +1,16 @@
 /* .stockContainer {
     border: solid;
-    background-color: grey;
+    background-color: teal;
     width: 50%;
+    margin: 0 auto;
+    border-radius: 10%;
 } 
-.container {
-    display: flex;
-    justify-content: space-evenly;
+  
+.stockStockContainer {
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.container div {
-    width: 25%;
-} */
+.stockStockContainer div {
+  width: 25%;
+}

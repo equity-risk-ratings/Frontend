@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Menu, Input } from "semantic-ui-react";
+import { Menu, Input, Icon } from "semantic-ui-react";
 import { NavLink } from "react-router-dom";
 
 const Nav = props => <NavLink exact {...props} activeClassName="active" />;
@@ -14,6 +14,7 @@ export default class TradeNav extends Component {
 
     return (
       <Menu color="teal">
+        <Icon name="chart line" color="teal" size="huge" />
         <Menu.Item
           name="home"
           as={Nav}
@@ -37,7 +38,7 @@ export default class TradeNav extends Component {
         <Menu.Item
           name="DataPage"
           as={Nav}
-          to={"/datapage"}
+          to={"/stock-data"}
           active={activeItem === "DataPage"}
           onClick={this.handleItemClick}
         >
@@ -64,19 +65,29 @@ export default class TradeNav extends Component {
           Quotes
         </Menu.Item>
 
+        {/* <Menu.Item
+          name="UserProfile"
+          as={Nav}
+          to={"/user-profile"}
+          active={activeItem === "user-profile"}
+          onClick={this.handleItemClick}
+        >
+          User-Profile
+        </Menu.Item> */}
+
         <Menu.Menu position="right">
           <Menu.Item>
             <Input icon="search" placeholder="Search..." />
           </Menu.Item>
           <Menu.Item
-          name="UserProfile"
-          as={Nav}
-          to={"/user-profile"}
-          active={activeItem === "UserProfile"}
-          onClick={this.handleItemClick}
-        >
-          User Profile
-        </Menu.Item>
+            name="UserProfile"
+            as={Nav}
+            to={"/user-profile"}
+            active={activeItem === "UserProfile"}
+            onClick={this.handleItemClick}
+          >
+            User Profile
+          </Menu.Item>
           <Menu.Item
             name="logout"
             active={activeItem === "logout"}

@@ -1,17 +1,25 @@
-import React from 'react';
+import React from "react";
 
-import DataHardData from './components/DataHardData';
-import Chart from './components/Chart';
+import DataHardData from "./components/DataHardData";
+import Chart from "./components/Chart";
+import TradeNav from "./components/TradeNav";
+import DarkModeButton from './components/DarkModeButton';
+import TopStockLiveFeed from "./components/TopStockLiveFeed";
 
-import './components/basicStyles/Data.css';
+import "./components/basicStyles/Data.css";
+
+
 
 const Data = () => {
-    return (
-        <section className="dataContainer">
-            <DataHardData />
-            <Chart />
-        </section>
-    )
+  return (
+    <section className="dataDataContainer">
+      <TradeNav />  
+      <DataHardData />
+      <DarkModeButton />
+      <Chart />
+      <TopStockLiveFeed />
+    </section>
+  )
 }
 
 export default Data;

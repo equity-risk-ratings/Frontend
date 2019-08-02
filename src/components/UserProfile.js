@@ -25,7 +25,6 @@ const UserProfile = props => {
 
   const updateProfile = event => {
     event.preventDefault();
-
     setUpdateInfo();
   };
 

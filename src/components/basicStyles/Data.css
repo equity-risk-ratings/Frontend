@@ -1,5 +1,8 @@
-/* .dataContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-} */
+.dataDataContainer {
+    color: whitesmoke;
+}
+ 
+.dark-mode {
+    color: #fff;
+    background-color: #313843;
+}

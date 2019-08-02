@@ -2,9 +2,8 @@ import React, { useState, useEffect } from "react";
 import TradeForm from "./TradeForm";
 import "semantic-ui-css/semantic.min.css";
 import CommitModal from "./CommitModal";
-
 import TradeNav from "./TradeNav";
-
+import RatingList from "./RatingList";
 import axios from "axios";
 import FormOutput from "./FormOutput";
 import { Header, Table, Button, Icon } from "semantic-ui-react";
@@ -37,11 +36,15 @@ function TradingHome() {
   const tradeChange = newTrade => {
     setTrade([...trade, newTrade]);
   };
+
   console.log("state check:", setStock);
   return (
     <div className="TradingHome">
       <TradeNav />
-      <h3>My Favorites</h3>
+      {/* <RatingList /> */}
+      <Header as="h3" block>
+        My Favorite Equities <Icon name="favorite" color="teal" />
+      </Header>
 
       <Button
         basic
@@ -165,9 +168,16 @@ function TradingHome() {
         </Table.Body>
       </Table>
 
-      <h1>Trader Execution</h1>
+      {/* <h1>Trader Execution</h1> */}
+      <Header as="h2" icon>
+        <Icon name="settings" color="teal" />
+        Trading Interface
+        <Header.Subheader>
+          Enter/Exit and Cancel all trades here
+        </Header.Subheader>
+      </Header>
 
-      <Button color="red" onClick={toggleModal}>
+      <Button fluid color="red" onClick={toggleModal}>
         Halt Trading
       </Button>
       <TradeForm teamAdd={tradeChange} />
