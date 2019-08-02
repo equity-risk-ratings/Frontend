@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import TradeForm from "./TradeForm";
 import "semantic-ui-css/semantic.min.css";
 import CommitModal from "./CommitModal";
+import RatingsList from "./RatingList";
+import Carousel from "semantic-ui-carousel-react";
 
 import TradeNav from "./TradeNav";
 
@@ -41,7 +43,9 @@ function TradingHome() {
   return (
     <div className="TradingHome">
       <TradeNav />
-      {/* <h3>My Favorites</h3> */}
+
+      <RatingsList />
+
       <Header as="h3" block>
         My Favorite Equities <Icon name="favorite" color="teal" />
       </Header>
