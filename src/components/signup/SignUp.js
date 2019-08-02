@@ -20,10 +20,13 @@ function SignUp(props) {
   const register = event => {
     event.preventDefault();
     const regInfo = { firstName, lastName, email, password };
-    console.log('Info', regInfo)
+    console.log("Info", regInfo);
     axios
-      .post("https://equity-risks.herokuapp.com/api/auth/register", regInfo)
-      .then(res => {console.log('data', res) ; props.history.push("/signin")})
+      .post("http://localhost:5000/api/auth/register", regInfo)
+      .then(res => {
+        console.log("data", res);
+        props.history.push("/signin");
+      })
       .catch(err => console.log(err.response));
   };
 
