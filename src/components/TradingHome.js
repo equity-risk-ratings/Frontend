@@ -2,13 +2,10 @@ import React, { useState, useEffect } from "react";
 import TradeForm from "./TradeForm";
 import "semantic-ui-css/semantic.min.css";
 import CommitModal from "./CommitModal";
-/* import RatingsList from "./RatingList"; */
 import TradeNav from "./TradeNav";
 import axios from "axios";
 import FormOutput from "./FormOutput";
 import { Header, Table, Button, Icon } from "semantic-ui-react";
-import "./Rating/slick.css";
-import "./Rating/slick-theme.css";
 
 function TradingHome() {
   const [trade, setTrade] = useState([]);

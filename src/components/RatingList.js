@@ -122,10 +122,10 @@ export default function RatingList() {
   ]);
 
   return (
-    <div>
+    <section className="character-list grid-view">
       {ratings.map(rating => {
         return <RatingsCard key={rating.id} rating={rating} />;
       })}
-    </div>
+    </section>
   );
 }

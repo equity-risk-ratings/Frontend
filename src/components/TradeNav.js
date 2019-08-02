@@ -65,6 +65,16 @@ export default class TradeNav extends Component {
           Quotes
         </Menu.Item>
 
+        <Menu.Item
+          name="OurRating"
+          as={Nav}
+          to={"/our-rating"}
+          active={activeItem === "home"}
+          onClick={this.handleItemClick}
+        >
+          Our Ratings
+        </Menu.Item>
+
         {/* <Menu.Item
           name="UserProfile"
           as={Nav}
