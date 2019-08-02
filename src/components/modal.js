@@ -20,3 +20,10 @@ export const innerBox = {
   borderRadius: "5px",
   boxShadow: "0 1px 6px -2px black"
 };
+
+export const ratingsBox = {
+  padding: "5px",
+  display: "flex",
+  flexWrap: "wrap",
+  justifyContent: "space-between"
+};
