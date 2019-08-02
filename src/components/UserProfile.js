@@ -13,9 +13,10 @@ import {
 // import "./UserProfile.css";
 
 const UserProfile = props => {
-  console.log(props);
-  const [updateInfo, setUpdateInfo] = React.useState({ props });
-  const [/* editing,  */ setEditing] = React.useState(false);
+  console.log("Passed in props", props);
+  const [updateInfo, setUpdateInfo] = React.useState(props);
+  const [editing, setEditing] = React.useState(false);
+  console.log("My State", updateInfo);
 
   const handleChange = event => {
     const { name, value } = event.target;
@@ -24,14 +25,6 @@ const UserProfile = props => {
 
   const updateProfile = event => {
     event.preventDefault();
-    axios
-      .get("https://equity-risks.herokuapp.com/api/users/:id")
-      .then(res => {
-        console.log(res.data);
-      })
-      .catch(err => {
-        console.log(err);
-      });
     setUpdateInfo();
   };
 
@@ -42,16 +35,14 @@ const UserProfile = props => {
 
   useEffect(() => {
     axios
-      .get(
-        `https://equity-risks.herokuapp.com/api/users/${props.match.params.id}`
-      )
+      .get('http://localhost:5000/api/users/individual')
       .then(res => {
         console.log(res.data);
       })
       .catch(err => {
-        console.log(err);
+        console.log(err.message);
       });
-  }, [props]);
+  }, [props.match.params.id]);
 
   return (
     <Container>
