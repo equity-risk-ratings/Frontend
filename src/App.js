@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import "semantic-ui-css/semantic.min.css";
+import "~slick-carousel/slick/slick.css";
+import "~slick-carousel/slick/slick-theme.css";
 import TradingHome from "./components/TradingHome";
 import SignIn from "./components/signin/SignIn";
 import SignUp from "./components/signup/SignUp";
