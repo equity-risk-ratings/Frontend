@@ -10541,6 +10541,16 @@ selfsigned@^1.9.1:
   dependencies:
     node-forge "0.7.5"
 
+semantic-ui-carousel-react@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/semantic-ui-carousel-react/-/semantic-ui-carousel-react-1.1.1.tgz#ca851b58e80bade4471d649e9e83ffbb14091c61"
+  integrity sha512-ZhPLFN5ty9iFMhSao6G3HgLjvyFB2cTdHK8CA2qmbBuzdT/o7oEqMLfcZV76ue/J/Iu6D4BMq/CwVfbgFN1qeA==
+  dependencies:
+    react "^16.8.6"
+    react-dom "^16.8.6"
+    semantic-ui-css "^2.4.1"
+    semantic-ui-react "^0.87.3"
+
 semantic-ui-css@^2.4.1:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/semantic-ui-css/-/semantic-ui-css-2.4.1.tgz#f5aea39fafb787cbd905ec724272a3f9cba9004a"

@@ -65,7 +65,7 @@ export default class TradeNav extends Component {
           Quotes
         </Menu.Item>
 
-        <Menu.Item
+        {/* <Menu.Item
           name="UserProfile"
           as={Nav}
           to={"/user-profile"}
@@ -73,21 +73,21 @@ export default class TradeNav extends Component {
           onClick={this.handleItemClick}
         >
           User-Profile
-        </Menu.Item>
+        </Menu.Item> */}
 
         <Menu.Menu position="right">
           <Menu.Item>
             <Input icon="search" placeholder="Search..." />
           </Menu.Item>
           <Menu.Item
-          name="UserProfile"
-          as={Nav}
-          to={"/user-profile"}
-          active={activeItem === "UserProfile"}
-          onClick={this.handleItemClick}
-        >
-          User Profile
-        </Menu.Item>
+            name="UserProfile"
+            as={Nav}
+            to={"/user-profile"}
+            active={activeItem === "UserProfile"}
+            onClick={this.handleItemClick}
+          >
+            User Profile
+          </Menu.Item>
           <Menu.Item
             name="logout"
             active={activeItem === "logout"}
